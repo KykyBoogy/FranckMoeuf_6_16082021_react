@@ -1,12 +1,12 @@
 import Tag from './Tag';
 
 const HomeHeader = () => {
-
+const logo = require("../assets/img/logo.png")
     return (
-        <header className="container header" role="banner">
+        <header className="container-header" role="banner">
             <a href="./index.html">
                 <img 
-                    src="./img/logo.png" 
+                    src={require("../assets/img/logo.png").default} 
                     alt="Fisheye Home page" 
                     className="header__logo"/>
             </a>

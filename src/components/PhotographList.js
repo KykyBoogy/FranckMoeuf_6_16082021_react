@@ -5,22 +5,21 @@ const PhotographList = () => {
 
     const FisheyeDataFR = require('../data/FisheyeDataFR.json');
     const DataPhotographes = FisheyeDataFR.photographes;
-    const portraitPath = "./public/img/Photographers ID Photos/";
     
     console.log(FisheyeDataFR);
     return (
         <div className="photograph-list">
             <div className="data-test">
                 { DataPhotographes.map((data) => {
-                    console.log(portraitPath + data.portrait);
+                    console.log("../assets/img/photographers_id_photos/" + data.portrait);
                    return (
-                       <div key={ data.id }>  
+                       <div key={data.id}>  
                             <header>
-                                <img src={portraitPath + data.portrait } alt="" />                           
+                                <img src={require(`../assets/img/photographers_id_photos/${data.portrait}`).default} alt="" />                           
                             </header>
-                            <h4>{ data.nom }</h4>
-                            <h5>{ data.ville },{ data.country }</h5>
-                            <p>{ data.tagline }</p>
+                            <h4>{data.nom}</h4>
+                            <h5>{data.ville},{data.country}</h5>
+                            <p>{data.tagline}</p>
                         <footer>
                         {data.tags.map((tag) => {
                             return (
