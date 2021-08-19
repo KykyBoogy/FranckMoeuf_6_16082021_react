@@ -14,7 +14,7 @@ const PhotographList = () => {
                 { DataPhotographes.map((data) => {
                     console.log(portraitPath + data.portrait);
                    return (
-                       <div key={ data.id }>
+                       <div key={ data.id }>  
                             <header>
                                 <img src={portraitPath + data.portrait } alt="" />                           
                             </header>
