@@ -21,12 +21,12 @@ const PhotographList = () => {
                             <h5>{data.ville},{data.country}</h5>
                             <p>{data.tagline}</p>
                         <footer>
-                        {data.tags.map((tag) => {
+                        {data.tags.map((tag) => {  
                             return (
                             <button className="buttonGroup"
                                     type="button" 
-                                    key={ tag }>
-                                <span>#{ tag }</span>
+                                    key={tag}>
+                                <span>#{tag}</span>
                             </button>
                             )
                         })}
