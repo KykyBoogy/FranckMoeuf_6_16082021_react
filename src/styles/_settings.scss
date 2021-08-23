@@ -1,0 +1,33 @@
+// ******************* Couleurs primaires *********************
+$color__primary1: #901C1C;
+$color__primary2: #D3573C;
+
+
+// ******************* Couleurs secondaires *********************
+$color__secondary1: #525252;
+$color__secondary2: #FAFAFA; 
+$color__secondary-light: #DB8876;
+$color__grey-light: #C4C4C4;
+
+
+// ******************* Fonts Family *********************
+$font-family: 'DM Sans';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }

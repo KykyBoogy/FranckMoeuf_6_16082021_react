@@ -1,4 +1,4 @@
-import HomeHeader from "../components/Header"
+import HomeHeader from "../components/HomeHeader"
 import PhotographList from "../components/PhotographList";
 
 const Home = () => {
