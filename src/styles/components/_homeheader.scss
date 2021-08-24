@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+
+    &__title {
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        color: $color__primary1;
+        font-weight: 400;
+    }
+}

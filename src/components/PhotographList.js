@@ -8,33 +8,38 @@ const PhotographList = () => {
     
     console.log(FisheyeDataFR);
     return (
-        <div className="photograph-list">
-            <div className="data-test">
+        <div>
+            <main className="container__main">
                 { DataPhotographes.map((data) => {
-                    console.log("../assets/img/photographers_id_photos/" + data.portrait);
+                    //console.log("../assets/img/photographers_id_photos/" + data.portrait);
                    return (
-                       <div key={data.id}>  
-                            <header>
-                                <img src={require(`../assets/img/photographers_id_photos/${data.portrait}`).default} alt="" />                           
-                            </header>
-                            <h4>{data.nom}</h4>
-                            <h5>{data.ville},{data.country}</h5>
-                            <p>{data.tagline}</p>
-                        <footer>
-                        {data.tags.map((tag) => {  
-                            return (
-                            <button className="buttonGroup"
-                                    type="button" 
-                                    key={tag}>
-                                <span>#{tag}</span>
-                            </button>
-                            )
-                        })}
-                        </footer>
-                       </div>
+                       <div className="photographer" key={data.id}>  
+                            <div className="photographer__img">
+                                <a href="todo.html" className="photographer__img--link">
+                                    <img src={require(`../assets/img/photographers_id_photos/${data.portrait}`).default} alt="" />
+                                    <h2>{data.nom}</h2>
+                                </a>                           
+                            </div>
+                            <div className="photographer__text">
+                                <p className="photographer__text--localisation">{data.ville},{data.country || data.pays}</p>
+                                <p className="photographer__text--desc">{data.tagline}</p>
+                                <p className="photographer__text--price">{data.prix}€/jour</p>
+                            </div>
+                            <ul className="photographer__tag">
+                            {data.tags.map((tag) => {  
+                                return (
+                                <li className="buttonGroup"
+                                        type="button" 
+                                        key={tag}>
+                                    <span>#{tag}</span>
+                                </li>
+                                )
+                            })}
+                            </ul>
+                        </div>
                    )
                 }) }
-            </div>
+            </main>
         </div>
     );
 };

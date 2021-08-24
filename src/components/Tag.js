@@ -10,11 +10,10 @@ const Tag = () => {
                         'Animals',
                         'Events']
     return (
-        <nav>
-            <div className="headerNavList">
+            <div className="navbar">
                 {tagsArray.map((tag) => {
                     return (
-                        <button className="buttonGroup"
+                        <button className="navbar__buttons"
                                 type="button" 
                                 key={tag}>
                             <span>#{tag}</span>
@@ -23,7 +22,7 @@ const Tag = () => {
                 })}
                 
             </div>
-        </nav>
+        
     );
 };
 

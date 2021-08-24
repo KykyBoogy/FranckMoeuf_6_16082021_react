@@ -4,14 +4,13 @@ import Logo from './Logo';
 const HomeHeader = () => {
 
     return (
-        <header>
+        <header className="header">
             <Logo />
             <Tag />
-            <h1 className="header__title">Nos photographes</h1>
+            <h2 className="header__title">Nos photographes</h2>
         </header>
     );
 
 }
-
 
 export default HomeHeader;
