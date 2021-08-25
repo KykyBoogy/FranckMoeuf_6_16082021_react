@@ -4,7 +4,7 @@
 
     &__buttons {
         background: none;
-        margin-left: .5rem;
+        margin-left: 0.2rem;
         color: $color__primary1;
         border: 1px solid $color__grey-light;
         padding: 0.15rem 0.5rem;
@@ -13,8 +13,8 @@
         cursor: pointer;
 
         &:hover {
-            background-color: #C4C4C4;
-            text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+            background-color: $color__primary2;
+            //text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
             color: black;
         }
         &:active,
@@ -23,8 +23,8 @@
             color: white;
         }
         &.is-checked {
-        color: white;
-        text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+            color: white;
+            text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
         }
 
     }

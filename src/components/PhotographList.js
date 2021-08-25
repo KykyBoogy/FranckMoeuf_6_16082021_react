@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const PhotographList = () => {
@@ -15,13 +16,13 @@ const PhotographList = () => {
                    return (
                        <div className="photographer" key={data.id}>  
                             <div className="photographer__img">
-                                <a href="todo.html" className="photographer__img--link">
+                                <Link to={`/photograph/${data.id}`} className="photographer__img--link">
                                     <img src={require(`../assets/img/photographers_id_photos/${data.portrait}`).default} alt="" />
                                     <h2>{data.nom}</h2>
-                                </a>                           
+                                </Link>                           
                             </div>
                             <div className="photographer__text">
-                                <p className="photographer__text--localisation">{data.ville},{data.country || data.pays}</p>
+                                <p className="photographer__text--localisation">{data.ville}, {data.country || data.pays}</p>
                                 <p className="photographer__text--desc">{data.tagline}</p>
                                 <p className="photographer__text--price">{data.prix}€/jour</p>
                             </div>

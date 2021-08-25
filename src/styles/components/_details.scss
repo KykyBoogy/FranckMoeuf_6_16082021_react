@@ -1,0 +1,53 @@
+.photograph {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // justify-content: space-around;
+    top: 8rem;
+    // left: 5rem;
+    width: 1240px;
+    height: 313px;
+
+    &__details {
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        left: 5rem;
+
+        h1 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 47px;
+            text-align: center;
+            color: #D3573C;
+        }
+
+        &--localisation {
+            font-size: 18px;
+            line-height: 17px;
+            color: $color__primary1;
+        }
+
+        &--desc {
+            font-size: 15px;
+            line-height: 13px;
+            color: black;
+            font-weight: 100;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 10rem;
+
+        img {
+            clip-path: ellipse(45% 45%);
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Logo = () => {
     return (
         <div className="logo">
-                <a href="./index.html">
+                <Link to="/">
                     <img src={require("../assets/img/logo.png").default} 
                         alt="Fisheye Home page" />
-                </a>
+                </Link>
             </div>
     );
 };

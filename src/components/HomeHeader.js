@@ -1,4 +1,4 @@
-import Tag from './Tag';
+import Tags from './Tags';
 import Logo from './Logo';
 
 const HomeHeader = () => {
@@ -6,7 +6,7 @@ const HomeHeader = () => {
     return (
         <header className="header">
             <Logo />
-            <Tag />
+            <Tags />
             <h2 className="header__title">Nos photographes</h2>
         </header>
     );
