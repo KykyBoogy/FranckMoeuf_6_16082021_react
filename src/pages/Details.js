@@ -18,6 +18,7 @@ const Details = () => {
             <header>
                 <Logo />
             </header>
+            <main className="container__main">
             {DataPhotographes.filter(data => data.id === idPhotograph).map((val) => {
                 return (
                     <div className="photograph">
@@ -26,6 +27,11 @@ const Details = () => {
                             <p className="photograph__details--localisation">{val.ville}, {val.country || val.pays}</p>
                             <p className="photograph__details--desc">{val.tagline}</p>
                         </div>
+                        <div className="photograph__button">
+                            <button>
+                                Bouton
+                            </button>
+                        </div>
                         <div className="photograph__img">
                             <img src={require(`../assets/img/photographers_id_photos/${val.portrait}`).default} alt="" />
                         </div>
@@ -33,6 +39,7 @@ const Details = () => {
                     
                 )
             })}
+            </main>
         </div>
     );
 };

@@ -1,30 +1,42 @@
 import React from 'react';
 
-const  selectedTags = ['test', '2'];
+let  selectedTags = [];
 
 const Tags = () => {
-    const tagsArray = ['Portrait', 
-                        'Art', 
-                        'Fashion', 
-                        'Architecture',
-                        'Travel',
-                        'Sport',
-                        'Animals',
-                        'Events']
+    
+    const tagsArray = ['portrait', 
+                        'art', 
+                        'mode', 
+                        'architecture',
+                        'voyage',
+                        'sports',
+                        'animaux',
+                        'événements']
+    let checkedTag = false;
+// const FisheyeDataFR = require('../data/FisheyeDataFR.json');
+// const DataPhotographes = FisheyeDataFR.photographes;
+
+// console.log(tagsArray);
     return (
             <div className="navbar">
                 {tagsArray.map((tag) => {
                     return (
-                        <button className={`navbar__buttons ${/* si le tag est contenu dans l'array */true ? 'navbar__buttons__selected' : ''}`}
+                        <button className={`navbar__buttons ${checkedTag === true ? 'navbar__buttons__is-checked' : ''}`}
                                 type="button" 
                                 key={tag}
-                                // onClick={() => {
-                                //     if (/* pas sélectionné */) {
-                                //         //ajoute
-                                //     } else {
-                                //         //on retire le tag de la liste
-                                //     }
-                                // }}
+                                onClick={() => {
+                                    if (!selectedTags.includes(tag) /* pas sélectionné */) {
+                                        //ajoute
+                                        selectedTags.push(tag);
+                                        checkedTag = true;
+                                        
+                                    } else {
+                                        //on retire le tag de la liste
+                                        selectedTags.splice(tag);
+            
+                                    }
+                                    console.log(selectedTags);
+                                }}
                                 >
                             <span>#{tag}</span>
                         </button>

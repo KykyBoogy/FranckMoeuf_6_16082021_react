@@ -7,7 +7,7 @@ const PhotographList = () => {
     const FisheyeDataFR = require('../data/FisheyeDataFR.json');
     const DataPhotographes = FisheyeDataFR.photographes;
     
-    console.log(FisheyeDataFR);
+    // console.log(FisheyeDataFR);
     return (
         <div>
             <main className="container__main">

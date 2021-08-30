@@ -1,10 +1,8 @@
 .photograph {
     position: absolute;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    // justify-content: space-around;
+    grid-template-columns: 40% 20% 40%;
     top: 8rem;
-    // left: 5rem;
     width: 1240px;
     height: 313px;
 
@@ -12,7 +10,7 @@
         font-style: normal;
         font-weight: normal;
         text-align: center;
-        left: 5rem;
+        //left: 5rem;
 
         h1 {
             font-style: normal;
@@ -37,10 +35,16 @@
         }
     }
 
+    &__button {
+        margin: 0 auto;
+        padding: 15px 0 0 0;
+        
+    }
+
     &__img {
         position: absolute;
-        display: flex;
-        justify-content: flex-end;
+        // display: flex;
+        // justify-content: flex-end;
         right: 10rem;
 
         img {
