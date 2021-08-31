@@ -53,11 +53,11 @@ const Details = () => {
                             .map((media) => {
                                 const FirstName = val.nom.substr(0,val.nom.indexOf(' '));
                                 console.log(FirstName);
-                                console.log(media.image || media.vidéo);
+                                console.log(media.image || media.video);
                                 return (
                                     <article className="gallery__photo">
                                         
-                                            <img src={require(`../assets/img/${FirstName}/${media.image || media.vidéo}`).default} alt="" />
+                                            <img src={require(`../assets/img/${FirstName}/${media.image || media.video}`).default} alt="" />
                                         
                                     </article>
                                 )
