@@ -1,6 +1,19 @@
 .navbar {
+    position: absolute;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: stretch;
+    // align-content: space-between;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: space-between;
+    top: 100px;
+    padding: 0 30px;
 
     &__buttons {
         background: none;

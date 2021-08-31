@@ -92,7 +92,7 @@
       {
         "id": 9275938,
         "photographeId": 82,
-        "image": "Event-_eddingGazebo.jpg",
+        "image": "Event_WeddingGazebo.jpg",
         "tags": ["événements"],
         "aime": 69,
         "date": "2018-02-22",
@@ -192,7 +192,7 @@
       {
         "id": 725639493,
         "photographeId": 925,
-        "image": "Event_ProductPitchjpg",
+        "image": "Event_ProductPitch.jpg",
         "tags": ["événements"],
         "aime": 3,
         "date": "2019-05-20",
@@ -228,7 +228,7 @@
       {
         "id": 83958935,
         "photographeId": 925,
-        "video": "Animals_Puppiness.mp4",
+        "vidéo": "Animals_Puppiness.mp4",
         "tags": ["animaux"],
         "aime": 52,
         "date": "2016-06-12",
@@ -392,7 +392,7 @@
       {
         "id": 5234343,
         "photographeId": 243,
-        "video": "Animals_Wild_Horses_in_the_mountains.mp4",
+        "vidéo": "Animals_Wild_Horses_in_the_mountains.mp4",
         "tags": ["animaux"],
         "aime": 142,
         "date": "23/08/2019",
@@ -401,7 +401,7 @@
       {
         "id": 95234343,
         "photographeId": 243,
-        "image": "Animals_Rainbow.jpg.jpg",
+        "image": "Animals_Rainbow.jpg",
         "tags": ["animaux"],
         "aime": 59,
         "date": "2019-07-02",
@@ -502,7 +502,7 @@
       {
         "id": 952343423,
         "photographeId": 930,
-        "video": "Sport_Tricks_in_the_air.mp4",
+        "vidéo": "Sport_Tricks_in_the_air.mp4",
         "tags": ["sport"],
         "aime": 150,
         "date": "2018-02-30",

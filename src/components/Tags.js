@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 let  selectedTags = [];
 
@@ -13,26 +13,34 @@ const Tags = () => {
                         'animaux',
                         'événements']
     let checkedTag = false;
+    const [list, updateList] = useState(tagsArray);
+
+    const handleRemoveItem = (e) => {
+        const name = e.target.getAttribute("name")
+         updateList(list.filter(item => item.name !== name));
+       };
 // const FisheyeDataFR = require('../data/FisheyeDataFR.json');
 // const DataPhotographes = FisheyeDataFR.photographes;
 
 // console.log(tagsArray);
     return (
             <div className="navbar">
-                {tagsArray.map((tag) => {
+                {list.map((tag, index) => {
                     return (
                         <button className={`navbar__buttons ${checkedTag === true ? 'navbar__buttons__is-checked' : ''}`}
                                 type="button" 
-                                key={tag}
+                                key={index}
                                 onClick={() => {
                                     if (!selectedTags.includes(tag) /* pas sélectionné */) {
                                         //ajoute
                                         selectedTags.push(tag);
                                         checkedTag = true;
+                                         // console.log(tag);
                                         
                                     } else {
                                         //on retire le tag de la liste
-                                        selectedTags.splice(tag);
+                                        // handleRemoveItem;
+                                        // console.log(removedTag);
             
                                     }
                                     console.log(selectedTags);

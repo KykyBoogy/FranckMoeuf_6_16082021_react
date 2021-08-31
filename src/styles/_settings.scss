@@ -44,6 +44,11 @@ body {
       monospace;
   }
 
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
   .container {
     max-width: 1920px;
     display: flex;
@@ -52,12 +57,20 @@ body {
     padding: 2rem 6rem;
     align-items: center;
 
+    // &__main {
+    //     display: flex;
+    //     flex-flow: row wrap;
+    //     padding-top: 3rem;
+    //     margin-left: -30px;
+    //     margin-right: -30px;
+    // }
     &__main {
-        display: flex;
-        flex-flow: row wrap;
-        padding-top: 3rem;
-        margin-left: -30px;
-        margin-right: -30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 125px;
+      padding-top: 10px;
     }
 }
 
