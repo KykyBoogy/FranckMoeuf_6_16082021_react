@@ -58,12 +58,14 @@
     &__tag {
         display: flex;
         justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
         margin-top: .7rem;
 
         span {
             font-style: normal;
             font-weight: 500;
-            font-size: 12px;
+            font-size: 11px;
             line-height: 16px;
             text-align: center;
             color: $color__primary1;

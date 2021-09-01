@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
 const Details = () => {
@@ -11,14 +11,14 @@ const Details = () => {
     const DataPhotographes = FisheyeDataFR.photographes;
     const MediaPhotograph = FisheyeDataFR.médias;
 
-    console.log(MediaPhotograph);
+    console.log(FisheyeDataFR);
     
     return (
         <div>
             <header className="header">
                 <Logo />
             </header>
-            <main className="container__main">
+            <main className="container__detail">
             {DataPhotographes.filter(data => data.id === idPhotograph).map((val) => {
                 return (
                     <>
@@ -27,7 +27,7 @@ const Details = () => {
                                 <h1>{val.nom}</h1>
                                 <p className="photograph__details--localisation">{val.ville}, {val.country || val.pays}</p>
                                 <p className="photograph__details--desc">{val.tagline}</p>
-                                <ul className="photographer__tag">
+                                <ul className="photograph__tag">
                             {val.tags.map((tag) => {  
                                 return (
                                 <li className="buttonGroup"
@@ -55,10 +55,14 @@ const Details = () => {
                                 console.log(FirstName);
                                 console.log(media.image || media.video);
                                 return (
-                                    <article className="gallery__photo">
-                                        
+                                    <article className="gallery__img">
+                                        <Link to="" className="gallery__img--link">
                                             <img src={require(`../assets/img/${FirstName}/${media.image || media.video}`).default} alt="" />
-                                        
+                                        </Link>
+                                        <footer className="gallery__img--footer">
+                                            <h5>Titre</h5>
+                                            <span>{media.aime}</span>
+                                        </footer>
                                     </article>
                                 )
                         })}

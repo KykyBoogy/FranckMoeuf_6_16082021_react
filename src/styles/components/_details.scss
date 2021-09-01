@@ -2,7 +2,7 @@
 
 }
 .photograph {
-    // position: absolute;
+    position: absolute;
     // display: grid;
     // grid-template-columns: 40% 20% 40%;
     // top: 8rem;
@@ -14,18 +14,20 @@
     justify-content: space-around;
     align-items: stretch;
     align-content: center;
-    width: 100%;
+    width: 80%;
+    padding: 0 25px;
 
     &__details {
         font-style: normal;
         font-weight: normal;
         text-align: center;
-        ont-style: normal;
+        font-style: normal;
         font-weight: normal;
         text-align: center;
         position: absolute;
         left: 5px;
         padding-top: 15px;
+        width: 60%;
 
         h1 {
             font-style: normal;
@@ -54,6 +56,26 @@
             padding: 8px;
             text-align: left;
             padding-left: 0;
+        }
+    }
+
+    &__tag {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: .7rem;
+
+        span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 16px;
+            text-align: center;
+            color: $color__primary1;
+            margin-left: 0.2rem;
+            border: 1px solid $color__grey-light;
+            padding: 0.15rem 0.5rem;
+            border-radius: 1rem;
         }
     }
 
@@ -88,5 +110,62 @@
             width: 140px;
             height: 140px;
         }
+    }
+}
+
+.gallery {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    // grid-gap: 1.75rem;
+    top: 280px;
+
+    &__img {
+        
+
+        &--link {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            
+
+            img {
+                // clip-path: ellipse(45% 45%);
+                object-fit: cover;
+                width: 335px;
+                height: 190px;
+                border: 1px solid $color__grey-light;
+                border-radius: 5px;
+            }
+        }
+        &--footer {
+            display: grid;
+            grid-template-columns: 90% repeat(2, 1fr);
+            grid-template-rows: 1fr;
+
+            h5 {
+                margin: 0;
+                padding: 10px 0;
+                color: $color__primary1;
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+            }
+    
+            span {
+                padding: 10px 0;
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: right;
+                color: $color__primary1;
+            }
+
+        }
+        
     }
 }
