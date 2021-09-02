@@ -1,31 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
+import Image from '../components/Image';
+import Modal from "../components/Modal";
 
 const Details = () => {
     const {photographId} = useParams();
     // Parse Int pour convertir en nombre entier l'Id
     const idPhotograph = parseInt(photographId);
-    const FisheyeDataFR = require('../data/FisheyeDataFR.json');
-    const DataPhotographes = FisheyeDataFR.photographes;
-    const MediaPhotograph = FisheyeDataFR.médias;
-
-    console.log(FisheyeDataFR);
-    
+    const fishEyeData = require('../data/FishEyeData.json');
+    const dataPhotographers = fishEyeData.photographers;
+    const mediaPhotograph = fishEyeData.media;
+    const [show, setShow] = useState(false);
+    // console.log(FishEyeData);
     return (
-        <div>
+        <>
             <header className="header">
                 <Logo />
             </header>
             <main className="container__detail">
-            {DataPhotographes.filter(data => data.id === idPhotograph).map((val) => {
+            {dataPhotographers.filter(data => data.id === idPhotograph)
+            .map((val) => {
                 return (
                     <>
                         <section className="photograph">
                             <article className="photograph__details">
-                                <h1>{val.nom}</h1>
-                                <p className="photograph__details--localisation">{val.ville}, {val.country || val.pays}</p>
+                                <h1>{val.name}</h1>
+                                <p className="photograph__details--localisation">{val.city}, {val.country}</p>
                                 <p className="photograph__details--desc">{val.tagline}</p>
                                 <ul className="photograph__tag">
                             {val.tags.map((tag) => {  
@@ -49,31 +51,31 @@ const Details = () => {
                             </article>
                         </section>
                         <section className="gallery">
-                        {MediaPhotograph.filter(medias => medias.photographeId === idPhotograph)
+                        {mediaPhotograph.filter(medias => medias.photographerId === idPhotograph)
                             .map((media) => {
-                                const FirstName = val.nom.substr(0,val.nom.indexOf(' '));
-                                console.log(FirstName);
-                                console.log(media.image || media.video);
+                                
+                                const firstName = val.name.substr(0,val.name.indexOf(' '));
+                                
+                                // console.log(mediaImageTitle);
+                                // console.log(media.image || media.video);
                                 return (
-                                    <article className="gallery__img">
-                                        <Link to="" className="gallery__img--link">
-                                            <img src={require(`../assets/img/${FirstName}/${media.image || media.video}`).default} alt="" />
-                                        </Link>
-                                        <footer className="gallery__img--footer">
-                                            <h5>Titre</h5>
-                                            <span>{media.aime}</span>
-                                        </footer>
-                                    </article>
+                                    <Image firstName={firstName}
+                                        mediaTitle={media.title} 
+                                        mediaImage={media.image} 
+                                        mediaVideo={media.video}
+                                        mediaLike={media.likes} />
                                 )
                         })}
                         </section>
+                        
                     </>
                 )
             })}
-                    
+                    <button className="contact" onClick={() => setShow(true)}>Contactez-moi</button>
+                    <Modal onClose={() => setShow(false)} show={show} />
                     
             </main>
-        </div>
+        </>
     );
 };
 

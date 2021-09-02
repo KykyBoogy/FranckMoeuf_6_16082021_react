@@ -118,7 +118,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     // grid-gap: 1.75rem;
-    top: 280px;
+    top: 300px;
 
     &__img {
         
@@ -140,7 +140,7 @@
         }
         &--footer {
             display: grid;
-            grid-template-columns: 90% repeat(2, 1fr);
+            grid-template-columns: 85% repeat(2, 1fr);
             grid-template-rows: 1fr;
 
             h5 {
@@ -165,7 +165,33 @@
                 color: $color__primary1;
             }
 
+            button {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                color: $color__primary1;
+            }
+
         }
         
     }
+
+}
+
+.contact {
+    background: $color__primary1;
+    height: 35px;
+    width: 150px;
+    color: $color__secondary2;
+    border-radius: 5px;
+    border: none;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    top: 85%;
+    position: fixed;
+    z-index: 9999;
 }

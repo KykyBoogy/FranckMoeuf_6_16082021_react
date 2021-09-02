@@ -4,7 +4,6 @@ import { Route, Switch } from "react-router";
 import Details from "./pages/Details";
 
 
-
 function App() {
   return (
     <div className="App">

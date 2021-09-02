@@ -25,21 +25,23 @@
         font-size: 12px;
         cursor: pointer;
 
+        
+
         &:hover {
             background-color: $color__primary2;
             //text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
             color: black;
         }
-        &:active,
-        &.is-checked {
+        &:active {
             background-color: #901C1C;
             color: white;
-        }
-        &.is-checked {
-            color: white;
-            text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
         }
 
     }
 
+}
+.button-is-checked {
+    background-color: #901C1C;
+    color: white;
+    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
 }
