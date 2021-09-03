@@ -194,4 +194,14 @@
     top: 85%;
     position: fixed;
     z-index: 9999;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color__primary2;
+        color: black;
+    }
+    &:active {
+        background-color: #901C1C;
+        color: white;
+    }
 }

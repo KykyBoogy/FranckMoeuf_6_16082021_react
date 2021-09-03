@@ -1,35 +1,145 @@
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+}
 .modal {
     position: fixed;
+    z-index: 10000;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+}
+
+
 
     .modal__content {
-        height: 600px;
-        width: 380px;
-        background: $color__secondary-light;
+        background: #DB8876;
+        margin: 5% auto;
+        width: 100%;
+        max-width: 500px;
+        animation-name: modalopen;
+        animation-duration: 0.8s;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        padding-top: 10px;
+
+        
+        
 
         .modal__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             padding: 10px;
+            padding: 15px 15px 0 15px;
+            margin-bottom: -10px;
 
             &--title {
                 margin: 0;
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 28px;
+                line-height: 47px;
+                color: #000000;
             }
+
+            &--closed {
+                cursor: pointer;
+                background:transparent;
+                border: transparent;
+
+                img {
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+
+        .modal__name {
+            margin: 0;
+            font-family: DM Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 47px;
+            color: #000000;
+            padding: 0 0 0 15px;
+            margin-bottom: 15px;
         }
 
         .modal__body {
             display: flex;
             flex-direction: column;
             padding: 10px;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+
+            label {
+                margin-left: 5px;
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 30px;
+                color: #312E2E;
+            }
+            input {
+                margin: 2px 5px 10px 5px;
+                height: 35px;
+                background: #FFFFFF;
+                border-radius: 5px;
+                border:transparent;
+            }
+            &--textarea {
+                margin: 2px 5px 10px 5px;
+                height: 150px;
+                background: #FFFFFF;
+                border-radius: 5px;
+                border: transparent;
+            }
         }
     }
 
-}
+        .modal__footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 16px;
+            margin-bottom: 50px;
+
+            button {
+                background: #901C1C;
+                height: 35px;
+                width: 150px;
+                color: #FAFAFA;
+                border-radius: 5px;
+                border: none;
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 23px;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color__primary2;
+                    color: black;
+                }
+                &:active {
+                    background-color: #901C1C;
+                    color: white;
+                }
+            }
+        }
+    
+

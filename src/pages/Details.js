@@ -64,15 +64,22 @@ const Details = () => {
                                         mediaImage={media.image} 
                                         mediaVideo={media.video}
                                         mediaLike={media.likes} />
+                                        
                                 )
+                                
                         })}
+                        
                         </section>
                         
+                        
                     </>
+                    
                 )
+                
             })}
                     <button className="contact" onClick={() => setShow(true)}>Contactez-moi</button>
-                    <Modal onClose={() => setShow(false)} show={show} />
+                    <Modal onClose={() => setShow(false)} 
+                            show={show} />
                     
             </main>
         </>
