@@ -16,11 +16,11 @@ const Tags = ({selectedTags, setSelectedTags}) => {
 // const DataPhotographes = FisheyeDataFR.photographes;
 
 // console.log(tagsArray);
-console.log(selectedTags);
+// console.log(selectedTags);
     return (
             <div className="navbar">
                 {tagsArray.map((tag, index) => {
-                    console.log(selectedTags, selectedTags.includes(tag));
+                    // console.log(selectedTags, selectedTags.includes(tag));
                     return (
                         <button className={`navbar__buttons ${selectedTags.includes(tag) ? 'button-is-checked' : ''}`}
                                 type="button" 

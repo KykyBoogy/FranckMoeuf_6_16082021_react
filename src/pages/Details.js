@@ -7,7 +7,7 @@ import Modal from "../components/Modal";
 
 const Details = () => {
     const {photographId} = useParams();
-    // Parse Int pour convertir en nombre entier l'Id
+     // Parse Int pour convertir en nombre entier l'Id
     const idPhotograph = parseInt(photographId);
     const fishEyeData = require('../data/FishEyeData.json');
     const dataPhotographers = fishEyeData.photographers;
@@ -41,30 +41,33 @@ const Details = () => {
                             })}
                             </ul>
                             </article>
-                            {/* <article className="photograph__button">
-                                <button className="photograph__button--contact">
-                                    Contactez-moi
-                                </button>
-                            </article> */}
+        
                             <article className="photograph__img">
                                 <img src={require(`../assets/img/photographers_id_photos/${val.portrait}`).default} alt="" />
                             </article>
                         </section>
                         <section className="gallery">
+                        <ul className="gallery__dropdown">
+                            <li className="gallery__dropdow--filters">Popularité</li>
+                            <li className="gallery__dropdow--filters">Date</li>
+                            <li className="gallery__dropdow--filters">Titre</li>
+                        </ul>
                         {mediaPhotograph.filter(medias => medias.photographerId === idPhotograph)
                             .map((media) => {
                                 
                                 const firstName = val.name.substr(0,val.name.indexOf(' '));
-                                
                                 // console.log(mediaImageTitle);
                                 // console.log(media.image || media.video);
                                 return (
+                                    
                                     <Image firstName={firstName}
                                         mediaTitle={media.title} 
                                         mediaImage={media.image} 
                                         mediaVideo={media.video}
-                                        mediaLike={media.likes} />
-                                        
+                                        mediaLike={media.likes}
+                                        mediaId = {media.id}
+                                        photographId = {val.id} />
+                                  
                                 )
                                 
                         })}

@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 // import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { BsHeartFill } from 'react-icons/bs';
+// import LightBox from './LightBox';
 
-const Image = ({ firstName, mediaTitle, mediaImage, mediaVideo, mediaLike }) => {
+const Image = ({ firstName,photographId, mediaTitle, mediaImage, mediaVideo, mediaLike , mediaId}) => {
     const [count, setCount] = useState(parseInt(mediaLike));
-    // const mediaImageTitle = mediaImage.substr(0, mediaImage.indexOf('_'));
     
     const handleClick = function (e) {
         e.preventDefault();

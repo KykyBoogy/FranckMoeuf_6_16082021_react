@@ -8,7 +8,7 @@ const PhotographList = ({selectedTags}) => {
     const DataPhotographers = FishEyeData.photographers;
     
     // console.log(FisheyeDataFR);
-    console.log(selectedTags);
+    // console.log(selectedTags);
     return (
         <div>
             <main className="container__main">

@@ -4,7 +4,7 @@ import PhotographList from "../components/PhotographList";
 
 const Home = () => {
     const [selectedTags, setSelectedTags] = useState([]);
-    console.log(selectedTags);
+    // console.log(selectedTags);
     return (
         <div className="home">
             <HomeHeader selectedTags={selectedTags} setSelectedTags={setSelectedTags}/>
