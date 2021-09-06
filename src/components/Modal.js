@@ -14,12 +14,12 @@ const Modal = props => {
     const idPhotograph = parseInt(photographId);
     const fishEyeData = require('../data/FishEyeData.json');
     const dataPhotographers = fishEyeData.photographers;
-    const {register, handleSubmit, formState} = useForm();
+    const {register, handleSubmit, formState, errors} = useForm();
     const {isSubmitting} = formState
     const onSubmit = async data => {
         await wait(2000)
     }
-    
+    // console.log(errors);
     if (!props.show) {
         return null
     }
@@ -44,11 +44,12 @@ const Modal = props => {
                 })}
                 <div className="modal__body">
                     <label htmlFor="firstName">Prénom</label>
-                    <input type="text" id="firstName" name="firstName" {...register("firstName")}></input>
+                    <input type="text" id="firstName" {...register("firstName", { require: "Vous devez saisir votre prénom !" })}></input>
+                    {errors.firstName && <p>{errors.firstName.message}</p>}
                     <label htmlFor="lastName">Nom</label>
-                    <input type="text" id="lastName" name="lastName" {...register("lastName")}></input>
+                    <input type="text" id="lastName" name="lastName" {...register("lastName", { require: true })}></input>
                     <label htmlFor="email">Email</label>
-                    <input type="text" id="email" name="email" {...register("email")}></input>
+                    <input type="text" id="email" name="email" {...register("email", { require: true })}></input>
                     <label htmlFor="textarea">Votre message</label>
                     <textarea className="modal__body--textarea" id="textarea" name="textarea"></textarea>
                 </div>
