@@ -19,5 +19,9 @@
         color: #901C1C;
         font-weight: 400;
         font-size: 14px;
+
+        @media (min-width: 900px) {
+            font-size: 25px;
+        }
     }
 }

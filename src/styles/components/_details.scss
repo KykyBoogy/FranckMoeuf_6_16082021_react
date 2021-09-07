@@ -115,10 +115,72 @@
 
 .gallery {
     position: absolute;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    // grid-gap: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2.8125rem 0;
+    padding: 0 1.25rem;
     top: 300px;
+
+    @media (min-width: 1300px) {
+        
+        justify-content: space-between;
+        margin: 2.8125rem 6.25rem;
+        padding: 0;
+
+        &__img {
+        
+            &--link {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                
+    
+                img { 
+                    height: 18.75rem;
+                    width: 21.875rem;
+                }
+            }
+            &--footer {
+                display: grid;
+                grid-template-columns: 85% repeat(2, 1fr);
+                grid-template-rows: 1fr;
+    
+                h5 {
+                    margin: 0;
+                    padding: 10px 0;
+                    color: $color__primary1;
+                    font-family: DM Sans;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+        
+                span {
+                    padding: 10px 0;
+                    font-family: DM Sans;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-align: right;
+                    color: $color__primary1;
+                }
+    
+                button {
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    color: $color__primary1;
+                }
+    
+            }
+            
+        }
+    
+    }
+    
 
     &__img {
         
@@ -176,10 +238,6 @@
         
     }
 
-    &__dropdown {
-        display: none;
-    }
-
 }
 
 .contact {
@@ -207,5 +265,15 @@
     &:active {
         background-color: #901C1C;
         color: white;
+    }
+
+    @media (min-width: 1000px) {
+        
+        top: 12%;
+        left: 38%;
+        height: 50px;
+        width: 120px;
+        font-size: 14px;
+        position: absolute;
     }
 }

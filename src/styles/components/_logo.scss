@@ -6,5 +6,10 @@
     img {
         height: 35px;
         object-fit: cover;
+
+        @media (min-width: 900px) {
+            padding: 0 1.25rem;
+            
+        }
     }
 }

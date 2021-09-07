@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import Logo from '../components/Logo';
 import Image from '../components/Image';
 import Modal from "../components/Modal";
+import DropDownSort from "../components/DropDownSort";
 
 const Details = () => {
     const {photographId} = useParams();
@@ -46,12 +47,8 @@ const Details = () => {
                                 <img src={require(`../assets/img/photographers_id_photos/${val.portrait}`).default} alt="" />
                             </article>
                         </section>
+                        <DropDownSort />
                         <section className="gallery">
-                        <ul className="gallery__dropdown">
-                            <li className="gallery__dropdow--filters">Popularité</li>
-                            <li className="gallery__dropdow--filters">Date</li>
-                            <li className="gallery__dropdow--filters">Titre</li>
-                        </ul>
                         {mediaPhotograph.filter(medias => medias.photographerId === idPhotograph)
                             .map((media) => {
                                 

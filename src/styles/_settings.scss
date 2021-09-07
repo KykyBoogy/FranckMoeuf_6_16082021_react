@@ -66,11 +66,14 @@ body {
     // }
     &__main {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
       align-items: center;
       margin-top: 125px;
       padding-top: 10px;
+      width: 100%;
+
+      
     }
 
     &__detail {

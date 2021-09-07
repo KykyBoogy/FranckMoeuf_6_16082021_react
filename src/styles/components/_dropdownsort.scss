@@ -1,0 +1,70 @@
+.selectdiv {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    
+    .selectdiv {
+        position: relative;
+        display: flex;
+        float: left;
+        min-width: 125px;
+        margin: 50px 33%;
+        top: 120px;
+        right: 35%;
+    }
+    .selectdiv:after {
+        content: '\f078';
+        font: normal normal normal 12px/1 FontAwesome;
+        color: #FFFFFF;
+        right: 11px;
+        top: 6px;
+        height: 34px;
+        padding: 15px 0px 0px 8px;
+        position: absolute;
+        pointer-events: none;
+        user-select: none;
+    }
+    
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        /* Add some styling */
+        
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 45px;
+        float: right;
+        margin: 5px 0px;
+        padding: 0px 10px;
+        font-size: 14px;
+        line-height: 1.75;
+        color: #FAFAFA;
+        background-color: $color__primary1;
+        background-image: none;
+        border: none;
+        border-radius: 5px;
+        -ms-word-break: normal;
+        word-break: normal;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .titlesort {
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 23px;
+        color: #000000;
+        width: 50px;
+        right: 120%;
+        position: absolute;
+    }
+    
+}
+
+
